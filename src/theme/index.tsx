@@ -20,6 +20,7 @@ declare module 'styled-components' {
 			lightRed: string;
 			gray: string;
 			veryDarkBlue: string;
+			borderGray: string;
 		};
 		fontFamilies: {
 			normal: string;

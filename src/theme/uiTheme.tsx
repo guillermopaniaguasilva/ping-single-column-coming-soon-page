@@ -6,10 +6,11 @@ export const breakpoints = {
 export const colors = {
 	white: '#fff',
 	blue: 'hsl(223, 87%, 63%)',
-	paleBlue: 'hsl(223, 100%, 88%)',
-	lightRed: 'hsl(354, 100%, 66%)',
-	gray: 'hsl(0, 0%, 59%)',
+	paleBlue: '#B8C7ED',
+	lightRed: '#FF5466',
+	gray: '#969696',
 	veryDarkBlue: 'hsl(209, 33%, 12%)',
+	borderGray: 'rgba(76, 123, 243, 0.146498)',
 };
 
 export const fontFamilies = {
