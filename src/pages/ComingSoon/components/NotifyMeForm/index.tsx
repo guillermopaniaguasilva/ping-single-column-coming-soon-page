@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { Form, Input, ErrorMessage, Submit } from './styles';
+import { Form, InputGroup, Input, ErrorMessage, Submit } from './styles';
 
 const NotifyMeForm = () => {
 	const [email, setEmail] = useState({ value: '', error: false });
@@ -20,17 +20,19 @@ const NotifyMeForm = () => {
 
 	return (
 		<Form onSubmit={handleSubmit}>
-			<Input
-				value={email.value}
-				placeholder="Your email address..."
-				hasError={email.error}
-				onChange={(e) =>
-					setEmail({ value: e.target.value.toLowerCase(), error: false })
-				}
-			/>
-			{email.error && (
-				<ErrorMessage>Please provide a valid email address.</ErrorMessage>
-			)}
+			<InputGroup>
+				<Input
+					value={email.value}
+					placeholder="Your email address..."
+					hasError={email.error}
+					onChange={(e) =>
+						setEmail({ value: e.target.value.toLowerCase(), error: false })
+					}
+				/>
+				{email.error && (
+					<ErrorMessage>Please provide a valid email address.</ErrorMessage>
+				)}
+			</InputGroup>
 			<Submit>Notify Me</Submit>
 		</Form>
 	);

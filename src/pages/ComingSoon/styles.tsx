@@ -15,6 +15,11 @@ export const Heading = styled.h1`
 	font-size: 22px;
 	line-height: 32px;
 	text-align: center;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		font-size: 48px;
+		line-height: 60px;
+	}
 `;
 
 export const Bold = styled.span`
@@ -35,4 +40,9 @@ export const Illustration = styled.img`
 	margin: 72px 0 120px 0;
 	width: 320px;
 	height: 192px;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		width: 640px;
+		height: 358px;
+	}
 `;

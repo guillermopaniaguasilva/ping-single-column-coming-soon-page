@@ -4,6 +4,17 @@ export const Form = styled.form`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		flex-direction: row;
+		margin-top: 40px;
+	}
+`;
+
+export const InputGroup = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 `;
 
@@ -24,6 +35,13 @@ export const Input = styled.input<{ hasError: boolean }>`
 		line-height: 20px;
 		font-family: ${({ theme }) => theme.fontFamilies.normal};
 		font-weight: ${({ theme }) => theme.fontWeights.light};
+	}
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		width: 421px;
+		height: 54px;
+		margin-top: 0;
+		margin-right: 16px;
 	}
 `;
 
@@ -49,4 +67,10 @@ export const Submit = styled.button`
 	line-height: 16px;
 	font-family: ${({ theme }) => theme.fontFamilies.normal};
 	font-weight: ${({ theme }) => theme.fontWeights.semi};
+
+	@media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+		width: 200px;
+		height: 58px;
+		margin-top: 0;
+	}
 `;
